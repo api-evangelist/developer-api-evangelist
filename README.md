@@ -1,4 +1,4 @@
-api-evangelist-api
+Developer - API Evangelist
 ==================
 
-This is the public for all API Evangelist APIs.
+This is the public area for API Evangelist developers.
