@@ -13,7 +13,7 @@ destination: api-evangelist-api
 permalink: /:categories/:year/:month/:day/:title 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 
-paginate: 10
+paginate: 1000
 paginate_path: "/blog/page:num"
 
 production_url : http://developer.apievangelist.com
