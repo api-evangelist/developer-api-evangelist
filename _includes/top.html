@@ -1,13 +1,22 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8">
+
   <title>{{ page.title }}</title>
-  
-    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-    <link href="http://api.1.ongithub.com/css/style.css" rel="stylesheet" type="text/css" media="all">
+
+    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href='/css/screen.css' media='screen' rel='stylesheet' type='text/css'/>
     
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    
+    <script src="/js/mustache.js" type="text/javascript"></script>
+    <script src="/js/base64.js" type="text/javascript"></script>
+    <script src="/js/utilities.js" type="text/javascript"></script>                  
+    
+    <script src='/js/injector.js' type='text/javascript'></script>
+
     <style type="text/css">
+    
     #logo .site-title, #logo .site-description { display:block; }
     body {background-repeat:no-repeat;background-position:top center;border-top:4px solid #000000;}
     #header {background-repeat:repeat;background-position:top center;margin-top:0px;margin-bottom:0px;padding-top:20px;padding-bottom:15px;border:0px solid ;}
@@ -49,33 +58,23 @@
         {
         padding: 2px;   
         }
-        
-    .mainlist
-        {   
-        margin-top: 10px;
-        margin-left: 50px;
-        margin-bottom: 10px;
-        }
-    .mainlist li
-        {
-        list-style-type:disc;   
-        }        
+  
+    </style>  
     
-    </style>    
-    
-    <link rel="stylesheet" type="text/css" href="http://api.1.ongithub.com/css/swagger.css" media="screen" /> 
-    <link rel="stylesheet" type="text/css" href="http://api.1.ongithub.com/css/hightlight.default.css" media="screen" />                        
-    
-    <script src='http://api.1.ongithub.com/js/shred.bundle.js' type='text/javascript' /></script>
+  <script src="/js/shred.bundle.js" type="text/javascript"></script>
+  <script src='/js/jquery-1.8.0.min.js' type='text/javascript'></script>
+  <script src='/js/jquery.slideto.min.js' type='text/javascript'></script>
+  <script src='/js/jquery.wiggle.min.js' type='text/javascript'></script>
+  <script src='/js/jquery.ba-bbq.min.js' type='text/javascript'></script>
+  <script src='/js/handlebars-1.0.0.js' type='text/javascript'></script>
+  <script src='/js/underscore-min.js' type='text/javascript'></script>
+  <script src='/js/backbone-min.js' type='text/javascript'></script>
+  <script src='/js/swagger.js' type='text/javascript'></script>
+  <script src='/js/swagger-client.js' type='text/javascript'></script>
+  <script src='/js/swagger-ui.js' type='text/javascript'></script>
+  <script src='/js/highlight.7.3.pack.js' type='text/javascript'></script>
 
-    <script src='http://api.1.ongithub.com/js/handlebars-1.0.rc.1.js' type='text/javascript'></script>
-    <script src='http://api.1.ongithub.com/js/underscore-min.js' type='text/javascript'></script>
-    <script src='http://api.1.ongithub.com/js/backbone-min.js' type='text/javascript'></script>
-    <script src='http://api.1.ongithub.com/js/swagger.js' type='text/javascript'></script>
-    <script src='http://api.1.ongithub.com/js/swagger-ui.js' type='text/javascript'></script>
-    <script src='http://api.1.ongithub.com/js/highlight.7.3.pack.js' type='text/javascript'></script>
-    <script src='http://api.1.ongithub.com/js/mustache.js' type='text/javascript'></script>
-    <script src='http://api.1.ongithub.com/js/injector.js' type='text/javascript'></script>
-    <script src='http://api.1.ongithub.com/js/utilities.js' type='text/javascript'></script>
+  <!-- enabling this will enable oauth2 implicit scope support -->
+  <script src='/js/swagger-oauth.js' type='text/javascript'></script>    
   
 </head>

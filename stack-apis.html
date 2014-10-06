@@ -4,68 +4,71 @@ title: API Evangelist - Stack APIs
 overview: true
 ---
 
-<script type="text/javascript">
-
-    var $Path = 'http://api.apievangelist.com/definitions/stack-apis.json';
-
+<div class="swagger-section">
+	
+  <script type="text/javascript">
+  
     $(function () {
-        window.swaggerUi = new SwaggerUi({
-            url: $Path,
-            dom_id: "swagger-ui-container",
-            supportedSubmitMethods: ['get','post','put','delete'],          
-            onComplete: function(swaggerApi, swaggerUi){
-            if(console) {
-                console.log("Loaded SwaggerUI")
-                }
-        
-            $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
-            },
-            onFailure: function(data) {
-            if(console) {
-                console.log("Unable to Load SwaggerUI");
-                console.log(data);
-                }
-            },
-            docExpansion: "none"
-        });         
+      var url = window.location.search.match(/url=([^&]+)/);
+  if (url && url.length > 1) {
+    url = url[1];
+  } else {
+    url = "http://api.apievangelist.com/definitions/stack-apis.json";
+  }
+  window.swaggerUi = new SwaggerUi({
+    url: url,
+    dom_id: "swagger-ui-container",
+    supportedSubmitMethods: ['get', 'post', 'put', 'delete'],
+    onComplete: function(swaggerApi, swaggerUi){
+      log("Loaded SwaggerUI");
+      if(typeof initOAuth == "function") {
+        /*
+        initOAuth({
+          clientId: "your-client-id",
+          realm: "your-realms",
+          appName: "your-app-name"
+        });
+        */
+      }
+      $('pre code').each(function(i, e) {
+        hljs.highlightBlock(e)
+      });
+    },
+    onFailure: function(data) {
+      log("Unable to Load SwaggerUI");
+    },
+    docExpansion: "none",
+    sorter : "alpha"
+  });
 
-        window.swaggerUi.load(); 
-                              
-    });
-    
-    function setKeys()
-        {
-        // Auto set the AppID and AppKey              
-        $appid = getUrlVar('appid');
-        //alert($appid);      
-        if($appid!='')
-             {
-            object = document.getElementsByTagName('input');   
-            $.each(object, function(index, item) {
-                 //alert(dodump(item.name + ' = ' + item.value));
-                 if(item.name == 'appid'){ item.value = $appid; }
-            }); 
-            }   
-        $appkey = getUrlVar('appkey');  
-        //alert($appkey);       
-        if($appkey!='')
-             {
-            object = document.getElementsByTagName('input');   
-            $.each(object, function(index, item) {
-                // alert(dodump(item.name + ' = ' + item.value));
-                 if(item.name == 'appkey'){ item.value = $appkey; }
-            }); 
-            }                
-        }
-</script> 
+  function addApiKeyAuthorization() {
+    var key = $('#input_apiKey')[0].value;
+    log("key: " + key);
+    if(key && key.trim() != "") {
+        log("added key " + key);
+        window.authorizations.add("api_key", new ApiKeyAuthorization("api_key", key, "query"));
+    }
+  }
 
-<h2>API Evangelist - Stack APIs</h2>
+  $('#input_apiKey').change(function() {
+    addApiKeyAuthorization();
+  });
 
-<p>This is the developer portal for <a href="http://apievangelist.com">API Evangelist</a>. I tend to create separate projects, hosted on Github for all my API projects, but here you will find any APIs I've created under The API Stack brand here.</p>
-<p>The API Stack APIs all do one thing, and do it well and each API I design is open sourced as a Github project, with supporting documentation, API definition, etc. After I launch each API I will register here under my central developer hub.</p>
-<br />
-<div class="swagger-shell"> 
-    <div id="swagger-ui-container" class="swagger-ui-wrap"></div>
+  // if you have an apiKey you would like to pre-populate on the page for demonstration purposes...
+  /*
+    var apiKey = "myApiKeyXXXX123456789";
+    $('#input_apiKey').val(apiKey);
+    addApiKeyAuthorization();
+  */
+
+      window.swaggerUi.load();
+  });
+  
+  </script>    
+
+<!--<div id="message-bar" class="swagger-ui-wrap">&nbsp;</div>-->
+<div id="swagger-ui-container" class="swagger-ui-wrap"></div>
+
 </div>
 <p>These API is maintained by <a href="http://kinlane.com">Kin Lane</a> (<a href="https://twitter.com/kinlane">@kinlane</a>), the API Evangelist. If you have any questions, comments or there are APIs you'd like to see deployed, you can <a href="https://github.com/kinlane/developer-api-evangelist/issues" target="_blank">submit them on this projects, Github repo issue management</a>. I use <a href="http://bit.ly/13esk6Q" target="_blank">3Scale API Infrastructure</a> to manage <a href="https://apievangelist.3scale.net/" target="_blank">access to my APIs</a>, across all parts of the <a href="http://apievangelist.com/network.html">API Evangelist network</a>.</p>
 <br /><br />
