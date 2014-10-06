@@ -39,20 +39,8 @@ overview: true
       log("Unable to Load SwaggerUI");
     },
     docExpansion: "none",
-    sorter : "alpha"
-  });
-
-  function addApiKeyAuthorization() {
-    var key = $('#input_apiKey')[0].value;
-    log("key: " + key);
-    if(key && key.trim() != "") {
-        log("added key " + key);
-        window.authorizations.add("api_key", new ApiKeyAuthorization("api_key", key, "query"));
-    }
-  }
-
-  $('#input_apiKey').change(function() {
-    addApiKeyAuthorization();
+    sorter : "alpha",
+    docExpansion: "list"
   });
 
   // if you have an apiKey you would like to pre-populate on the page for demonstration purposes...
