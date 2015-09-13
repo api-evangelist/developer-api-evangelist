@@ -1,32 +1,145 @@
 ---
-layout: default
-title: API Evangelist
-overview: true
---- 
+layout: page
+---
 
-<h2>Developer - API Evangelist</h2>
+<div id="jsonBrowser">
+	<table cellpadding="3" cellspacing="2" border="0" width="95%" id="jsonBrowserOuterTable" style="margin-left: 15px;">
+		<tr>
+			<td colspan="3">
+				<table cellpadding="3" cellspacing="2" border="0" width="95%" id="jsonBrowserHeaderTable" style="margin-left: 15px;"></table>
+			</td>
+		</tr>
+		<tr>
+			<td width="45%" valign="top" align="center">
+				<table cellpadding="5" cellspacing="5" border="0" width="85%" id="jsonBrowserTable" style="margin-left: 15px;margin-top:15px;">
+					<tr id="onboarding" style="display: none;">
+						<td colspan="3" style="font-size: 22px; padding: 15px;"><strong>On-boarding</strong></td>
+					</tr>						
+					<tr id="X-getting-started-row" style="display: none;">
+						<td width="25" style="height: 55px;"></td>
+						<td width="75" align="center" valign="middle"><a href="" id="X-getting-started-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-running.png" width="35" /></a></td>
+						<td><a href="" id="X-getting-started-url">Getting Started</a></td>
+					</tr>	
+					<tr id="X-authentication-row" style="display: none;">
+						<td width="25" style="height: 55px;"></td>
+						<td width="75" align="center" valign="middle"><a href="" id="X-authentication-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-authentication.png" width="35" /></a></td>
+						<td><a href="" id="X-authentication-url">Authentication</a></td>
+					</tr>					
+					<tr id="X-faq-row" style="display: none;">
+						<td width="25" style="height: 55px;"></td>
+						<td width="75" align="center" valign="middle"><a href="" id="X-faq-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-question-mark.png" width="35" /></a></td>
+						<td><a href="" id="X-faq-url">FAQ</a></td>
+					</tr>					
+					<tr id="X-self-service-registration-row" style="display: none;">
+						<td width="25" style="height: 55px;"></td>
+						<td width="75" align="center" valign="middle"><a href="" id="X-self-service-registration-img-ur"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-hand-wrench.jpg" width="35" /></a></td>
+						<td><a href="" id="X-self-service-registration-url">Self-Service Registration</a></td>
+					</tr>									
+					<tr id="integration" style="display: none;">
+						<td colspan="3" style="font-size: 22px; padding: 15px;"><strong>Integration</strong></td>
+					</tr>						
+					<tr id="X-documentation-row" style="display: none;">
+						<td width="25" style="height: 55px;"></td>
+						<td width="75" align="center" valign="middle"><a href="" id="X-documentation-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-documentation-interactive.png" width="35" /></a></td>
+						<td><a href="" id="X-documentation-url">Documentation</a></td>
+					</tr>
+					<tr id="X-code-row" style="display: none;">
+						<td width="25" style="height: 55px;"></td>
+						<td width="75" align="center" valign="middle"><a href="" id="X-code-img-url"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-code.png" width="35" /></a></td>
+						<td><a href="" id="X-code-url">Code</a></td>
+					</tr>	
+					<tr id="X-pricing-row" style="display: none;">
+						<td width="25" style="height: 55px;"></td>
+						<td width="75" align="center" valign="middle"><a href="" id="X-pricing-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-dollar-sign.jpg" width="35" /></a></td>
+						<td><a href="" id="X-pricing-url">Pricing</a></td>
+					</tr>
+					<tr id="X-rate-limits-page-row" style="display: none;">
+						<td width="25" style="height: 55px;"></td>
+						<td width="75" align="center" valign="middle"><a href="" id="X-rate-limits-page-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-speed-limit.jpeg" width="35" /></a></td>
+						<td><a href="" id="X-rate-limits-page-url">Rate Limits</a></td>
+					</tr>						
+					<tr id="communication" style="display: none;">
+						<td colspan="3" style="font-size: 22px; padding: 15px;"><strong>Communication</strong></td>
+					</tr>						
+					<tr id="X-blog-row" style="display: none;">
+						<td width="25" style="height: 55px;"></td>
+						<td width="75" align="center" valign="middle"><a href="" id="X-blog-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-blog-icon.png" width="35" /></a></td>
+						<td><a href="" id="X-blog-url">Blog</a></td>
+					</tr>
+					<tr id="X-blog-rss-feed-row" style="display: none;">
+						<td width="25" style="height: 55px;"></td>
+						<td width="75" align="center" valign="middle"><a href="" id="X-blog-rss-feed-img-url"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-rss-icon.png" width="35" /></a></td>
+						<td><a href="" id="X-blog-rss-feed-url">Blog RSS</a></td>
+					</tr>
+					<tr id="X-twitter-row" style="display: none;">
+						<td width="25" style="height: 55px;"></td>
+						<td width="75" align="center" valign="middle"><a href="" id="X-twitter-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-twitter-icon.png" width="35" /></a></td>
+						<td><a href="" id="X-twitter-url">Twitter</a></td>
+					</tr>
+					<tr id="X-github-row" style="display: none;">
+						<td width="25" style="height: 55px;"></td>
+						<td width="75" align="center" valign="middle"><a href="" id="X-github-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-github.jpg" width="35" /></a></td>
+						<td><a href="" id="X-github-url">Github</a></td>
+					</tr>
+					<tr id="support" style="display: none;">
+						<td colspan="3" style="font-size: 22px; padding: 15px;"><strong>Support</strong></td>
+					</tr>						
+					<tr id="X-support-row" style="display: none;">
+						<td width="25" style="height: 55px;"></td>
+						<td width="75" align="center" valign="middle"><a href="" id="X-support-img-url"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-support.png" width="35" /></a></td>
+						<td><a href="" id="X-support-url">Support</a></td>
+					</tr>										
+					<tr id="updates" style="display: none;">
+						<td colspan="3" style="font-size: 22px; padding: 15px;"><strong>Updates</strong></td>
+					</tr>						
+					<tr id="X-roadmap-row" style="display: none;">
+						<td width="25" style="height: 55px;"></td>
+						<td width="75" align="center" valign="middle"><a href="" id="X-roadmap-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-highway.png" width="35" /></a></td>
+						<td><a href="" id="X-roadmap-url">Roadmap</a></td>
+					</tr>	
+					<tr id="X-issues-row" style="display: none;">
+						<td width="25" style="height: 55px;"></td>
+						<td width="75" align="center" valign="middle"><a href="" id="X-issues-img-url"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-bug.png" width="35" /></a></td>
+						<td><a href="" id="X-issues-url">Issues</a></td>
+					</tr>						
+					<tr id="X-change-log-row" style="display: none;">
+						<td width="25" style="height: 55px;"></td>
+						<td width="75" align="center" valign="middle"><a href="" id="X-change-log-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-recycling.jpg" width="35" /></a></td>
+						<td><a href="" id="X-change-log-url">Change Log</a></td>
+					</tr>	
+					<tr id="X-status-dashboard-row" style="display: none;">
+						<td width="25" style="height: 55px;"></td>
+						<td width="75" align="center" valign="middle"><a href="" id="X-status-dashboard-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-status-dashboard.png" width="35" /></a></td>
+						<td><a href="" id="X-status-dashboard-url">Status</a></td>
+					</tr>	
+					<tr id="legal" style="display: none;">
+						<td colspan="3" style="font-size: 22px; padding: 15px;"><strong>Legal</strong></td>
+					</tr>						
+					<tr id="X-terms-of-service-row" style="display: none;">
+						<td width="25" style="height: 55px;"></td>
+						<td width="75" align="center" valign="middle"><a href="" id="X-terms-of-service-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-terms-conditions.png" width="35" /></a></td>
+						<td><a href="" id="X-terms-of-service-url">Terms of Service</a></td>
+					</tr>	
+					<tr id="X-privacy-policy-row" style="display: none;">
+						<td width="25" style="height: 55px;"></td>
+						<td width="75" align="center" valign="middle"><a href="" id="X-privacy-policy-img-url"><img src="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/building-blocks/bw-privacy.png" width="35" /></a></td>
+						<td><a href="" id="X-privacy-policy-url">Privacy Policy</a></td>
+					</tr>																							
+				</table>
+			</td>
+			<td width="55%" valign="top">
+				<table cellpadding="5" cellspacing="5" border="0" width="95%" id="jsonBrowserIncludeTable" style="margin-left: 15px;">
+					
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>
 
-<p>This is the developer portal for <a href="http://apievangelist.com">API Evangelist</a>. I tend to create separate projects, hosted on Github for all my API projects, but this project is a little different, as these are the APIs that drive my core content platform--anything you read on API Evangelist came through these API channels.</p>
-<p>I use these services to publish content across my network, and welcome you to help distribute as well. All my <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">content is licensed CC BY 3.0</a>. <a href="https://apievangelist.3scale.net/" target="_blank">To access all you need is an API key</a>, and begin consuming via the API.</p>
-<p>This API is maintained by <a href="http://kinlane.com">Kin Lane</a> (<a href="https://twitter.com/kinlane">@kinlane</a>), the API Evangelist. If you have any questions, comments or there are APIs you'd like to see deployed, you can <a href="https://github.com/kinlane/developer-api-evangelist/issues" target="_blank">submit them on this projects, Github repo issue management</a>. I use <a href="http://bit.ly/13esk6Q" target="_blank">3Scale API Infrastructure</a> to manage <a href="https://apievangelist.3scale.net/" target="_blank">access to my APIs</a>, across all parts of the <a href="http://apievangelist.com/network.html">API Evangelist network</a>.</p>
-<hr />                
-              
-{% for post in site.posts limit:2 %}
-<div class="post">
-    
-    <p><a href="{{ post.url }}" rel="bookmark" title="{{ post.title }}" style="color:#000;"><h4><strong>{{ post.title }}</strong></h4></a> (<i><strong><span class="small">Posted on</span> <span class="post-date">{{ post.date | date:"%m-%d-%Y" }}</span></strong></i>)
-    <p><a href="{{ post.url }}" rel="bookmark" title="{{ post.title }}"><img src="{{ post.image }}" width="175" align="left" style="padding: 15px;" /></a></p>
-    <p>{{ post.content | strip_html | truncatewords: 100 }}...<a href="{{ post.url }}" rel="bookmark" title="{{ post.title }}" style="color:#000; font-weight: bold;">read more</a>.</p>
-    <br />
-    <hr />     
-   
-</div> 
-{% endfor %}  
-<br /><br />
-<!-- 3scale -->
-<p align="center">
-<a href="http://3scale.net" target="_blank" title="APIs From 3Scale">
-    <img src="https://s3.amazonaws.com/kinlane-productions/api-service-providers/3Scale/empowered-by-3scale.png" width="300" style="padding-bottom: 15px;" />
-</a>        
-</p>
-<!-- 3scale -->     
+<div id="questionsViewer" style="display: none;">
+	<p>This is an editor for the APIs.jon file contained as part of this repository, making them editable through a web interface, and able to save using the Github API (if you have access to repo)--enable full client-side management of Swagger files.</p>
+	<p>This APIs.json editor mounts the default APIs.json file for this project located at /apis.json, and renders to the page for viewing, and inline editing. I've used standard icons to assist in usability.</p>
+	<p>This APIs.json editor works in conjunction with the Swagger editor, allowing for the editing of the entire API discovery layer for this Github repository, and using APIs.json includes, I can link to the other supporting projects in this stack.</p>
+	<p>This is meant to be an quicker, dirtier, Swagger editor, and UI generator that runs 100% on Github, for this particular project. The code is not meant to be clean or for production. I'm purposely making the code verbose, and for instructional purposes, allowing all aspects of this to be modified and remixed as needed..</p>
+</div>
+<p><br /></p>
