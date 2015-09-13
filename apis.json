@@ -103,16 +103,41 @@
           "X-twitter": "apievangelist"
         }
       ]
+    },
+    {
+      "name": "Blog",
+      "description": "A blog API resource.",
+      "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-blog-icon.png",
+      "humanURL": "https://developer.apievangelist.com/blog/",
+      "baseURL": "http://blog.api.kinlane.com",
+      "tags": [
+        "API",
+        "Application Programming Interface",
+        "Blog"
+      ],
+      "properties": [
+        {
+          "type": "Swagger",
+          "url": "https://developer.apievangelist.com/blog/swagger.json"
+        },
+        {
+          "type": "x-postman",
+          "url": "https://developer.apievangelist.com/blog/postman.json"
+        }
+      ],
+      "contact": [
+        {
+          "FN": "API Evangliest",
+          "email": "info@apievangelist.com",
+          "X-twitter": "apievangelist"
+        }
+      ]
     }
   ],
   "include": [
     {
       "name": "API API (Inception)",
       "url": "https://kin-lane.github.io/api/apis.json"
-    },
-    {
-      "name": "Blog API",
-      "url": "https://kin-lane.github.io/blog/apis.json"
     },
     {
       "name": "Building Block API",

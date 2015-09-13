@@ -1,0 +1,1929 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Building Block",
+    "description": "This is an buildingblock for all my buildingblock entries. I use a single buildingblock system to manage all my sites. Based upon tagging, I then publish each post out to its respective Github Page based repo.",
+    "termsOfService": "http://stack.network/terms-of-service.html",
+    "version": "v2"
+  },
+  "host": "buildingblock.api.kinlane.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/buildingblocks/": {
+      "get": {
+        "summary": "all building blocks",
+        "description": "all building blocks",
+        "operationId": "getBuildingBlocks",
+        "parameters": [
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "query",
+            "in": "query",
+            "description": "a text query to search across building block",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "which page of results to show",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "description": "how many to show on page",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "which field to sort by",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "building block response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/buildingblock"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Building Block"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "add a building block post",
+        "description": "add a building block post",
+        "operationId": "addBuildingBlock",
+        "parameters": [
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "building_block_category_id",
+            "in": "query",
+            "description": "the category for the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "name of the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "about",
+            "in": "query",
+            "description": "details about the building block",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "sort_order",
+            "in": "query",
+            "description": "sort_order for the building block",
+            "required": false,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "building block response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/buildingblock"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Building Block"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      }
+    },
+    "/buildingblocks/bycategory/{category}": {
+      "get": {
+        "summary": "building blocks by category",
+        "description": "building blocks by category",
+        "operationId": "getBuildingBlocksByCategory",
+        "parameters": [
+          {
+            "name": "category",
+            "in": "path",
+            "description": "the building block category to filter by",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "building block response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/buildingblock"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Building Block"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      }
+    },
+    "/buildingblocks/bytype/{type}": {
+      "get": {
+        "summary": "building blocks by type",
+        "description": "building blocks by type",
+        "operationId": "getBuildingBlocksByType",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "description": "the building block type to filter by",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "building block response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/buildingblock"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Building Block"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      }
+    },
+    "/buildingblocks/{building_block_id}/": {
+      "get": {
+        "summary": "Retrieve a buildingblock using its slug",
+        "description": "Returns the building block detail",
+        "operationId": "getBuildingBlock",
+        "parameters": [
+          {
+            "name": "building_block_id",
+            "in": "path",
+            "description": "the unique id for buildingblock entry",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "building block response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/buildingblock"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Building Block"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      },
+      "put": {
+        "summary": "update building block",
+        "description": "update building block",
+        "operationId": "updateBuildingBlock",
+        "parameters": [
+          {
+            "name": "building_block_id",
+            "in": "path",
+            "description": "the unique id for buildingblock entry",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "building_block_category_id",
+            "in": "query",
+            "description": "the category for the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "name of the building block",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "about",
+            "in": "query",
+            "description": "details about the building block",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "sort_order",
+            "in": "query",
+            "description": "sort_order for the building block",
+            "required": false,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "building block response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/buildingblock"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Building Block"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      },
+      "delete": {
+        "summary": "delete building block",
+        "description": "delete building block",
+        "operationId": "deleteBuildingBlock",
+        "parameters": [
+          {
+            "name": "building_block_id",
+            "in": "path",
+            "description": "the unique id for buildingblock entry",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "building block response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/buildingblock"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Building Block"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      }
+    },
+    "/buildingblocks/{building_block_id}/tags/": {
+      "get": {
+        "summary": "building block tags",
+        "description": "building block tags",
+        "operationId": "getbuildingblockTags",
+        "parameters": [
+          {
+            "name": "building_block_id",
+            "in": "path",
+            "description": "id for building block",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Building Block Tags Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tag"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tags"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "add tag to building block",
+        "description": "add tag to building block",
+        "operationId": "addBuildingBlockTag",
+        "parameters": [
+          {
+            "name": "building_block_id",
+            "in": "path",
+            "description": "id for the building block",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tag",
+            "in": "query",
+            "description": "tag name",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Building Block Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tag"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tags"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      }
+    },
+    "/buildingblocks/{building_block_id}/tags/{tag}": {
+      "delete": {
+        "summary": "delete buildingblock tag",
+        "description": "delete buildingblock tag",
+        "operationId": "deletebuildingblockTag",
+        "parameters": [
+          {
+            "name": "building_block_id",
+            "in": "path",
+            "description": "id for the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tag",
+            "in": "path",
+            "description": "tag to remove from building block",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Building Block Tag Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tag"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tags"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      }
+    },
+    "/buildingblocks/{building_block_id}/images/": {
+      "get": {
+        "summary": "get building block images",
+        "description": "get building block images",
+        "operationId": "getBuildingBlockImages",
+        "parameters": [
+          {
+            "name": "building_block_id",
+            "in": "path",
+            "description": "id for building block",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Building Block Images Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/image"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Images"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "add building block image",
+        "description": "add building block image",
+        "operationId": "addBuildingBlockImage",
+        "parameters": [
+          {
+            "name": "building_block_id",
+            "in": "path",
+            "description": "id for the building block",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "formData",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "formData",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "path",
+            "in": "formData",
+            "description": "image path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "formData",
+            "description": "image type",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "formData",
+            "description": "image name",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Building Block Image Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/image"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Images"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      }
+    },
+    "/buildingblocks/{building_block_id}/images/{image_id}": {
+      "delete": {
+        "summary": "delete a building block image",
+        "description": "delete a building block image",
+        "operationId": "deleteBuildingBlockImage",
+        "parameters": [
+          {
+            "name": "building_block_id",
+            "in": "path",
+            "description": "id for the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "image_id",
+            "in": "path",
+            "description": "id for the image to remove from building block",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Building Block Image Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/image"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Images"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      }
+    },
+    "/buildingblocks/{building_block_id}/logs/": {
+      "get": {
+        "summary": "get building block logs",
+        "description": "get building block logs",
+        "operationId": "getBuildingBlockLogs",
+        "parameters": [
+          {
+            "name": "building_block_id",
+            "in": "path",
+            "description": "id for building block",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Building Block Log Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/log"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Logs"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "add building block log",
+        "description": "add building block log",
+        "operationId": "addBuildingBlockLog",
+        "parameters": [
+          {
+            "name": "building_block_id",
+            "in": "path",
+            "description": "id for the building block",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "formData",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "formData",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "formData",
+            "description": "type of log entry",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "details",
+            "in": "formData",
+            "description": "log details",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Building Block Log Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/log"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Logs"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      }
+    },
+    "/buildingblocks/{building_block_id}/logs/{log_id}": {
+      "delete": {
+        "summary": "delete a building block log",
+        "description": "delete a building block log",
+        "operationId": "deleteBuildingBlockLog",
+        "parameters": [
+          {
+            "name": "building_block_id",
+            "in": "path",
+            "description": "id for the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "log_id",
+            "in": "path",
+            "description": "id for the log",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Building Block Log Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/log"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Logs"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      }
+    },
+    "/buildingblocks/{building_block_id}/tools/": {
+      "get": {
+        "summary": "retrieve building block tools",
+        "description": "retrieve building block tools",
+        "operationId": "getBuildingBlockTools",
+        "parameters": [
+          {
+            "name": "building_block_id",
+            "in": "path",
+            "description": "id for building block",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Building Block Tool Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tool"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tools"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "add tool to building block",
+        "description": "add tool to building block",
+        "operationId": "addBuildingBlockTool",
+        "parameters": [
+          {
+            "name": "building_block_id",
+            "in": "path",
+            "description": "id for the building block",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "formData",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "formData",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tool_id",
+            "in": "formData",
+            "description": "the unique tool id",
+            "required": false,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "url",
+            "in": "formData",
+            "description": "url for the tool",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Building Block Tool Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tool"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tools"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      }
+    },
+    "/buildingblocks/{building_block_id}/tools/{tool_id}": {
+      "delete": {
+        "summary": "delete a building block tool",
+        "description": "delete a building block tool",
+        "operationId": "getBuildingBlockTool",
+        "parameters": [
+          {
+            "name": "building_block_id",
+            "in": "path",
+            "description": "id for the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tool_id",
+            "in": "path",
+            "description": "tool to remove from building block",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Building Block Tool Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tool"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tools"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      }
+    },
+    "/buildingblocks/{building_block_id}/organization/": {
+      "get": {
+        "summary": "retrieve building block companies",
+        "description": "retrieve building block companies",
+        "operationId": "getBuildingBlockOrganizations",
+        "parameters": [
+          {
+            "name": "building_block_id",
+            "in": "path",
+            "description": "id for building block",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Building Block Organization Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/organization"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Organizations"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "add organization to building block",
+        "description": "add organization to building block",
+        "operationId": "addBuildingBlockOrganization",
+        "parameters": [
+          {
+            "name": "building_block_id",
+            "in": "path",
+            "description": "id for the building block",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "formData",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "formData",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "organization_id",
+            "in": "formData",
+            "description": "the unique organization id",
+            "required": false,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "url",
+            "in": "formData",
+            "description": "url for the tool",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Building Block Organization Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/organization"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Organizations"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      }
+    },
+    "/buildingblocks/{building_block_id}/organization/{organization_id}": {
+      "delete": {
+        "summary": "delete a building block organization",
+        "description": "delete a building block organization",
+        "operationId": "getBuildingBlockOrganization",
+        "parameters": [
+          {
+            "name": "building_block_id",
+            "in": "path",
+            "description": "id for the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "organization_id",
+            "in": "path",
+            "description": "organization to remove from building block",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Building Block Organization Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/organization"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Organizations"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      }
+    },
+    "/buildingblocks/{building_block_id}/urls/": {
+      "get": {
+        "summary": "retrieve building block url",
+        "description": "retrieve building block url",
+        "operationId": "getbuildingblockURLs",
+        "parameters": [
+          {
+            "name": "building_block_id",
+            "in": "path",
+            "description": "id for building block",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Building Block URL Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/url"
+              }
+            }
+          }
+        },
+        "tags": [
+          "URLs"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "add buildingblock URL",
+        "description": "add buildingblock URL",
+        "operationId": "addBuildingBlockURL",
+        "parameters": [
+          {
+            "name": "building_block_id",
+            "in": "path",
+            "description": "id for the building block",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "formData",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "formData",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "formData",
+            "description": "type of url",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "url",
+            "in": "formData",
+            "description": "the url",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "formData",
+            "description": "a name for the url",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Building Block URL Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/url"
+              }
+            }
+          }
+        },
+        "tags": [
+          "URLs"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      }
+    },
+    "/buildingblocks/{building_block_id}/urls/{url_id}": {
+      "delete": {
+        "summary": "delete a building block url",
+        "description": "delete a building block url",
+        "operationId": "deleteBuildingBlockURL",
+        "parameters": [
+          {
+            "name": "building_block_id",
+            "in": "path",
+            "description": "id for the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "url_id",
+            "in": "path",
+            "description": "id for the url",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Building Block URL Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/url"
+              }
+            }
+          }
+        },
+        "tags": [
+          "URLs"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      }
+    },
+    "/buildingblocks/categories/": {
+      "get": {
+        "summary": "retrieve building block categories",
+        "description": "retrieve building block categories",
+        "operationId": "getBuildingBlockCategories",
+        "parameters": [
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Building Block Category Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/category"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Categories"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "add building block category",
+        "description": "add building block category",
+        "operationId": "addBuildingBlockCategory",
+        "parameters": [
+          {
+            "name": "appid",
+            "in": "formData",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "formData",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "formData",
+            "description": "type of url",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "url",
+            "in": "formData",
+            "description": "the url",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "formData",
+            "description": "a name for the url",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Building Block Category Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/category"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Categories"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      }
+    },
+    "/buildingblocks/categories/{category_id}": {
+      "delete": {
+        "summary": "delete a building block category",
+        "description": "delete a building block category",
+        "operationId": "deleteBuildingBlockCategory",
+        "parameters": [
+          {
+            "name": "category_id",
+            "in": "path",
+            "description": "id for the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the building block",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the building block",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Building Block Category Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/category"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Categories"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
+        ]
+      }
+    }
+  },
+  "securityDefinitions": {
+    "appid": {
+      "type": "apiKey",
+      "name": "appid",
+      "in": "query"
+    },
+    "appkey": {
+      "type": "apiKey",
+      "name": "appkey",
+      "in": "query"
+    }
+  },
+  "definitions": {
+    "buildingblock": {
+      "properties": {
+        "building_block_id": {
+          "description": "unique id of the building block",
+          "type": "integer",
+          "format": "id"
+        },
+        "building_block_category_id": {
+          "description": "id for the building block category",
+          "type": "integer",
+          "format": "id"
+        },
+        "name": {
+          "description": "name of the building block",
+          "type": "string"
+        },
+        "about": {
+          "description": "about the building block",
+          "type": "string"
+        },
+        "sort_order": {
+          "description": "sort order for the building block",
+          "type": "integer",
+          "format": "id"
+        }
+      }
+    },
+    "log": {
+      "properties": {
+        "api_id": {
+          "description": "id for the API",
+          "type": "integer",
+          "format": "id"
+        },
+        "type": {
+          "description": "type of log",
+          "type": "string"
+        },
+        "note": {
+          "description": "text of note",
+          "type": "string"
+        },
+        "details": {
+          "description": "details of log",
+          "type": "string"
+        },
+        "log_date": {
+          "description": "log date",
+          "type": "string"
+        }
+      }
+    },
+    "tool": {
+      "properties": {
+        "tool_id": {
+          "description": "id for the tool",
+          "type": "integer",
+          "format": "id"
+        },
+        "name": {
+          "description": "name of tool",
+          "type": "string"
+        },
+        "details": {
+          "description": "details of the tool",
+          "type": "string"
+        },
+        "post_date": {
+          "description": "date tool was posted",
+          "type": "string"
+        },
+        "url": {
+          "description": "primary url for tool",
+          "type": "string"
+        }
+      }
+    },
+    "url": {
+      "properties": {
+        "note_id": {
+          "description": "id for the API",
+          "type": "integer",
+          "format": "id"
+        },
+        "type": {
+          "description": "the type of url",
+          "type": "string"
+        },
+        "url": {
+          "description": "url for the url",
+          "type": "string"
+        },
+        "name": {
+          "description": "name of the url",
+          "type": "string"
+        }
+      }
+    },
+    "image": {
+      "properties": {
+        "api_id": {
+          "description": "id for the API",
+          "type": "integer",
+          "format": "id"
+        },
+        "image_id": {
+          "description": "id for the image",
+          "type": "integer",
+          "format": "id"
+        },
+        "name": {
+          "description": "name of the image",
+          "type": "string"
+        },
+        "path": {
+          "description": "path of the image",
+          "type": "string"
+        },
+        "type": {
+          "description": "type of image",
+          "type": "string"
+        }
+      }
+    },
+    "organization": {
+      "properties": {
+        "organization_id": {
+          "description": "unique id of the organization",
+          "type": "integer",
+          "format": "id"
+        },
+        "name": {
+          "description": "name of the organization",
+          "type": "string"
+        },
+        "details": {
+          "description": "details for the organization",
+          "type": "string"
+        },
+        "summary": {
+          "description": "summary of the organization",
+          "type": "string"
+        },
+        "post_date": {
+          "description": "date the organization was posted",
+          "type": "string"
+        },
+        "url": {
+          "description": "primary URL for the organization",
+          "type": "string"
+        },
+        "phone": {
+          "description": "primary phone for the organization",
+          "type": "string"
+        },
+        "email": {
+          "description": "primary email for the organization",
+          "type": "string"
+        },
+        "address": {
+          "description": "primary address for the organizaiton",
+          "type": "string"
+        },
+        "city": {
+          "description": "primary city for the organizaiton",
+          "type": "string"
+        },
+        "state": {
+          "description": "primary state for the organizaiton",
+          "type": "string"
+        },
+        "postal_code": {
+          "description": "primary postal code for the organizaiton",
+          "type": "string"
+        },
+        "country": {
+          "description": "primary country for the organizaiton",
+          "type": "string"
+        },
+        "rank": {
+          "description": "rank for the organizaiton",
+          "type": "string"
+        },
+        "location": {
+          "description": "primary location for the organizaiton",
+          "type": "string"
+        },
+        "photo": {
+          "description": "primary photo for the organizaiton",
+          "type": "string"
+        }
+      }
+    },
+    "tag": {
+      "properties": {
+        "tag_id": {
+          "description": "id for the tag",
+          "type": "integer",
+          "format": "id"
+        },
+        "tag": {
+          "description": "text tag",
+          "type": "string"
+        },
+        "api_count": {
+          "description": "number of items api with tag",
+          "type": "integer"
+        }
+      }
+    },
+    "category": {
+      "properties": {
+        "category_id": {
+          "description": "id for the category",
+          "type": "integer",
+          "format": "id"
+        },
+        "name": {
+          "description": "name of category",
+          "type": "string"
+        },
+        "sort_order": {
+          "description": "sort order for category",
+          "type": "string"
+        },
+        "type": {
+          "description": "type of category",
+          "type": "string"
+        }
+      }
+    }
+  }
+}
