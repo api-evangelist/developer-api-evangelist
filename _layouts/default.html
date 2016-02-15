@@ -158,8 +158,17 @@
   	$vlog = $.post($url, function() {});
   </script>
 
-  <script src="http://Kin-Lane.github.io/master/js/navigator-apis-json.js" type="text/javascript"></script>
-  <script src="http://plans.apievangelist.com/js/load.js?y=1" type="text/javascript"></script>
+  <script src="https://{{ site.org }}.github.io/master/js/editor-apis-json.js" type="text/javascript"></script>		 +  <script type="text/javascript">
+  <script src="https://{{ site.org }}.github.io/master/js/navigator-apis-json.js" type="text/javascript"></script>		 +    // project view log
+  <script src="https://{{ site.org }}.github.io/master/js/browser-apis-json.js" type="text/javascript"></script>		 +  	$url = "http://project.api.kinlane.com/project/view/";
+  <script src="https://{{ site.org }}.github.io/master/js/editor-swagger-json.js" type="text/javascript"></script>		 +  	$vlog = $.post($url, function() {});
+  <script src="https://{{ site.org }}.github.io/master/js/editor-config-json.js" type="text/javascript"></script>		 +  </script>
+  <script src="https://{{ site.org }}.github.io/master/js/editor-keys-json.js" type="text/javascript"></script>
+  <script src="https://{{ site.org }}.github.io/master/js/editor-question-json.js" type="text/javascript"></script>
+  <script src="https://{{ site.org }}.github.io/master/js/master-swagger-from-apis-json.js" type="text/javascript"></script>
+  <script src="https://{{ site.org }}.github.io/master/js/master-code-from-apis-json.js" type="text/javascript"></script>
+
+  <script src="https://{{ site.org }}.github.io/{{ site.repo }}/js/load.js" type="text/javascript"></script>
 
   </body>
 
