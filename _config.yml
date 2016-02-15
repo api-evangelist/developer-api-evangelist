@@ -1,4 +1,4 @@
-title:        API Evangelist
+title:        Developer
 url:          http://developer.apievangelist.com
 
 logo:         https://s3.amazonaws.com/kinlane-productions/api-evangelist/developer-api-evangelist.png
@@ -11,7 +11,7 @@ author:
   email:      'info@apievangelist.com'
 markdown:     kramdown
 
-permalink: /:categories/:year/:month/:day/:title
+permalink: /:categories/:year/:month/:day/:title/
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 
 paginate: 50
@@ -20,9 +20,9 @@ paginate_path: "/blog/page:num"
 categories_path : /categories.html
 tags_path : /tags.html
 
-org: kinlane
-repo: developer-api-evangelist
-resource: developer-api-evangelist
+org: api-evangelist
+repo: master
+resource: master
 oauthio: qUDL4eZqKPFb41SwuWIYIwLR6jI
 
 # Masthead title
