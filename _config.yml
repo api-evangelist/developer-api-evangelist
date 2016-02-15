@@ -38,7 +38,7 @@ feature_image_width: 45
 
 # Project
 project_image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-robots.jpeg
-project_summary: This is the master portal where I access all of the APIs I depend on to run my world as Kin Lane. Visit the getting started page to kick things off, and if you have any questions let me know. These APIs are meant to run my own infrastructure, and are always in development, but I encourage others to poke around, and let me know their thoughts.
+project_summary: This is my own developer portal for the API Evangelist platform. These are the APIs I have developed, and offer as part of the API Evangelist brand. This portal should have everything you need to get up and running, and working with the API resources I offer. If you are looking to use my APIs, I recommend dropping me a line, and let me get to know you, and what you are up to. I am not looking to be the next big API provider, so having thousands of users isn't important, but I am happy to share my resources with you.
 
 # Navigation
 navigation:

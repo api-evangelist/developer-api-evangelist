@@ -7,103 +7,84 @@
     "Application Programming Interface"
   ],
   "created": "2015-09-13",
-  "modified": "2015-09-13",
+  "modified": "2016-02-14",
   "url": "http://developer.apievangelist.com/apis.json",
   "SpecificationVersion": "0.14",
-  "apis": [
+  "x-common": [
     {
-      "name": "API Evangelist",
-      "description": "These are the APIs I use as part of the API Evangelist network.",
-      "image": "https://s3.amazonaws.com/kinlane-productions/api-evangelist/t-shirts/KL_InApiWeTrust-1000.png",
-      "humanURL": "https://kin-lane.github.io/master/",
-      "baseURL": "https://kin-lane.github.io/master/apis.json",
-      "tags": [
-        "API",
-        "Application Programming Interface",
-        "Master"
-      ],
-      "properties": [
-        {
-          "type": "X-blog",
-          "url": "https://kin-lane.github.io/master/blog/"
-        },
-        {
-          "type": "X-blog-rss-feed",
-          "url": "https://kin-lane.github.io/master/blog.xml"
-        },
-        {
-          "type": "X-change-log",
-          "url": "https://kin-lane.github.io/master/change-log/"
-        },
-        {
-          "type": "X-issues",
-          "url": "https://kin-lane.github.io/master/issues/"
-        },
-        {
-          "type": "X-portal",
-          "url": "https://kin-lane.github.io"
-        },
-        {
-          "type": "X-getting-started",
-          "url": "https://kin-lane.github.io/master/getting-started/"
-        },
-        {
-          "type": "X-authentication",
-          "url": "https://kin-lane.github.io/master/authentication/"
-        },
-        {
-          "type": "X-faq",
-          "url": "https://kin-lane.github.io/master/faq/"
-        },
-        {
-          "type": "X-pricing",
-          "url": "https://kin-lane.github.io/master/pricing/"
-        },
-        {
-          "type": "X-support",
-          "url": "https://kin-lane.github.io/master/support/"
-        },
-        {
-          "type": "X-privacy-policy",
-          "url": "https://kin-lane.github.io/master/privacy-policy/"
-        },
-        {
-          "type": "X-rate-limits-page",
-          "url": "https://kin-lane.github.io/master/rate-limits/"
-        },
-        {
-          "type": "X-issues",
-          "url": "https://kin-lane.github.io/master/issues/"
-        },
-        {
-          "type": "X-roadmap",
-          "url": "https://kin-lane.github.io/master/roadmap/"
-        },
-        {
-          "type": "X-status-dashboard",
-          "url": "https://kin-lane.github.io/master/status/"
-        },
-        {
-          "type": "X-terms-of-service",
-          "url": "https://kin-lane.github.io/master/terms-of-service/"
-        },
-        {
-          "type": "X-twitter",
-          "url": "https://twitter.com/kinlane"
-        },
-        {
-          "type": "X-github",
-          "url": "https://github.com/kin-lane/"
-        }
-      ],
-      "contact": [
-        {
-          "FN": "API Evangliest",
-          "email": "info@apievangelist.com",
-          "X-twitter": "apievangelist"
-        }
-      ]
+      "type": "X-blog",
+      "url": "https://developer.apievangelist.com/blog/"
     },
+    {
+      "type": "X-blog-rss-feed",
+      "url": "https://developer.apievangelist.com/blog.xml"
+    },
+    {
+      "type": "X-change-log",
+      "url": "https://developer.apievangelist.com/change-log/"
+    },
+    {
+      "type": "X-issues",
+      "url": "https://developer.apievangelist.com/issues/"
+    },
+    {
+      "type": "X-portal",
+      "url": "https://api-evangelist.github.io"
+    },
+    {
+      "type": "X-getting-started",
+      "url": "https://developer.apievangelist.com/getting-started/"
+    },
+    {
+      "type": "X-authentication",
+      "url": "https://developer.apievangelist.com/authentication/"
+    },
+    {
+      "type": "X-faq",
+      "url": "https://developer.apievangelist.com/faq/"
+    },
+    {
+      "type": "X-pricing",
+      "url": "https://developer.apievangelist.com/pricing/"
+    },
+    {
+      "type": "X-support",
+      "url": "https://developer.apievangelist.com/support/"
+    },
+    {
+      "type": "X-privacy-policy",
+      "url": "https://developer.apievangelist.com/privacy-policy/"
+    },
+    {
+      "type": "X-rate-limits-page",
+      "url": "https://developer.apievangelist.com/rate-limits/"
+    },
+    {
+      "type": "X-issues",
+      "url": "https://developer.apievangelist.com/issues/"
+    },
+    {
+      "type": "X-roadmap",
+      "url": "https://developer.apievangelist.com/roadmap/"
+    },
+    {
+      "type": "X-status-dashboard",
+      "url": "https://developer.apievangelist.com/status/"
+    },
+    {
+      "type": "X-terms-of-service",
+      "url": "https://developer.apievangelist.com/terms-of-service/"
+    },
+    {
+      "type": "X-twitter",
+      "url": "https://twitter.com/kinlane"
+    },
+    {
+      "type": "X-github",
+      "url": "https://github.com/kin-lane/"
+    }
+  ],
+  "apis": [
     {
       "name": "Blog",
       "description": "A blog API resource.",
@@ -137,31 +118,35 @@
   "include": [
     {
       "name": "API API (Inception)",
-      "url": "https://kin-lane.github.io/api/apis.json"
+      "url": "https://api-evangelist.github.io/api/apis.json"
     },
     {
       "name": "Building Block API",
-      "url": "https://kin-lane.github.io/buildingblock/apis.json"
+      "url": "https://api-evangelist.github.io/buildingblock/apis.json"
     },
     {
       "name": "Blog API",
-      "url": "https://kin-lane.github.io/blog/apis.json"
+      "url": "https://api-evangelist.github.io/blog/apis.json"
     },
     {
       "name": "Curated API",
-      "url": "https://kin-lane.github.io/curated/apis.json"
+      "url": "https://api-evangelist.github.io/curated/apis.json"
     },
     {
       "name": "News API",
-      "url": "https://kin-lane.github.io/news/apis.json"
+      "url": "https://api-evangelist.github.io/news/apis.json"
     },
     {
       "name": "Organization API",
-      "url": "https://kin-lane.github.io/organization/apis.json"
+      "url": "https://api-evangelist.github.io/organization/apis.json"
+    },
+    {
+      "name": "Plans API",
+      "url": "http://plans.apievangelist.com/apis.json"
     },
     {
       "name": "Tool API",
-      "url": "https://kin-lane.github.io/tool/apis.json"
+      "url": "https://api-evangelist.github.io/tool/apis.json"
     }
   ],
   "maintainers": [
