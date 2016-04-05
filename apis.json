@@ -1,52 +1,23 @@
 {
   "name": "Kin Lane - Master",
-  "description": "This is a master list of all of the APIs that I operate, and I make publicly available for anyone to use. Each API is intended to operate independent, within its own portal, but taking advantage of some common elements. Just click on the name of the API and you will be taken to its specific portal.",
+  "description": "These are the APIs I offer up as part of my API Evangelist platform. All of these APis have something to do with the API sector, and usually are focused on providing APIs, but I will also link to my other API related projects that may also be more about consuming, and aggregating APis.",
   "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/kin.png",
   "tags": [
     "Kin Lane",
-    "API",
-    "Audio",
-    "Blog",
-    "Building Block",
-    "Certification",
-    "Content",
-    "Curated",
-    "Dictionary",
-    "Idea",
-    "Image",
-    "Job",
-    "Keyword",
-    "Link",
-    "Linkrot",
-    "News",
-    "Note",
-    "Organization",
-    "Page",
-    "Paper",
-    "Patent",
-    "People",
-    "Project",
-    "Question",
-    "Scraping",
-    "Slide",
-    "Tag",
-    "Task",
-    "Tip",
-    "Tool",
-    "Video"
+    "API"
   ],
-  "created": "2016-02-14",
+  "created": "2016-04-04",
   "modified": "2015-01-22",
-  "url": "https://kin-lane.github.io/master/apis.json",
+  "url": "https://developer.apievangelist.com/apis.json",
   "specificationVersion": "0.14",
   "x-country": "US",
   "apis": [
     {
       "name": "Master",
-      "description": "This is the master portal for all of the Kin Lane APIs.",
-      "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/kin.png",
-      "humanURL": "https://kin-lane.github.io/master/",
-      "baseURL": "https://kin-lane.github.io/master/apis.json",
+      "description": "This is the master portal for all of the API Evangelist APIs.",
+      "image": "https://s3.amazonaws.com/kinlane-productions/api-evangelist/t-shirts/KL_InApiWeTrust-1000.png",
+      "humanURL": "http://developer.apievangelist.com/",
+      "baseURL": "http://developer.apievangelist.com/apis.json",
       "tags": [
         "API",
         "Application Programming Interface",
@@ -65,12 +36,12 @@
   ],
   "include": [
     {
-      "name": "API API",
-      "url": "https://kin-lane.github.io/api/apis.json"
+      "name": "Authentication API",
+      "url": "http://authentication.apievangelist.com/apis.json"
     },
     {
-      "name": "Audio API",
-      "url": "https://kin-lane.github.io/audio/apis.json"
+      "name": "API API",
+      "url": "https://kin-lane.github.io/api/apis.json"
     },
     {
       "name": "Blog API",
@@ -85,8 +56,8 @@
       "url": "https://kin-lane.github.io/certification/apis.json"
     },
     {
-      "name": "Content API",
-      "url": "https://kin-lane.github.io/content/apis.json"
+      "name": "Change Log API",
+      "url": "http://change-log.apievangelist.com/"
     },
     {
       "name": "Curated API",
@@ -97,6 +68,14 @@
       "url": "https://kin-lane.github.io/dictionary/apis.json"
     },
     {
+      "name": "Frequently Asked Questions API",
+      "url": "http://frequently-asked-questions.apievangelist.com/apis.json"
+    },
+    {
+      "name": "Getting Started API",
+      "url": "http://getting-started.apievangelist.com/apis.json"
+    },
+    {
       "name": "Glossary API",
       "url": "https://kin-lane.github.io/glossary/apis.json"
     },
@@ -105,96 +84,36 @@
       "url": "https://kin-lane.github.io/ideas/apis.json"
     },
     {
-      "name": "Image API",
-      "url": "https://kin-lane.github.io/image/apis.json"
-    },
-    {
-      "name": "Image Manipulation API",
-      "url": "https://kin-lane.github.io/image-manipulation/apis.json"
-    },
-    {
-      "name": "Job API",
-      "url": "https://kin-lane.github.io/job/apis.json"
-    },
-    {
-      "name": "Keyword API",
-      "url": "https://kin-lane.github.io/keyword/apis.json"
-    },
-    {
-      "name": "Link API",
-      "url": "https://kin-lane.github.io/link/apis.json"
-    },
-    {
-      "name": "Linkrot API",
-      "url": "https://kin-lane.github.io/linkrot/apis.json"
+      "name": "Issues API",
+      "url": "http://issues.apievangelist.com/apis.json"
     },
     {
       "name": "News API",
       "url": "https://kin-lane.github.io/news/apis.json"
     },
     {
-      "name": "Note API",
-      "url": "https://kin-lane.github.io/note/apis.json"
-    },
-    {
       "name": "Organization API",
       "url": "https://kin-lane.github.io/organization/apis.json"
-    },
-    {
-      "name": "Page API",
-      "url": "https://kin-lane.github.io/page/apis.json"
-    },
-    {
-      "name": "Paper API",
-      "url": "https://kin-lane.github.io/paper/apis.json"
     },
     {
       "name": "Patent API",
       "url": "https://kin-lane.github.io/patent/apis.json"
     },
     {
-      "name": "People API",
-      "url": "https://kin-lane.github.io/people/apis.json"
-    },
-    {
-      "name": "Project API",
-      "url": "https://kin-lane.github.io/project/apis.json"
-    },
-    {
       "name": "Question API",
       "url": "https://kin-lane.github.io/question/apis.json"
     },
     {
-      "name": "Scraping API",
-      "url": "https://kin-lane.github.io/scraping/apis.json"
+      "name": "Road Map API",
+      "url": "http://roadmap.apievangelist.com/apis.json"
     },
     {
-      "name": "Screen Capture API",
-      "url": "https://kin-lane.github.io/screen-capture/apis.json"
-    },
-    {
-      "name": "Slide API",
-      "url": "https://kin-lane.github.io/slide/apis.json"
-    },
-    {
-      "name": "Tag API",
-      "url": "https://kin-lane.github.io/tag/apis.json"
-    },
-    {
-      "name": "Task API",
-      "url": "https://kin-lane.github.io/task/apis.json"
-    },
-    {
-      "name": "Tip API",
-      "url": "https://kin-lane.github.io/tip/apis.json"
+      "name": "Support API",
+      "url": "http://support.apievangelist.com/apis.json"
     },
     {
       "name": "Tool API",
       "url": "https://kin-lane.github.io/tool/apis.json"
-    },
-    {
-      "name": "Video API",
-      "url": "https://kin-lane.github.io/video/apis.json"
     }
   ],
   "maintainers": [
