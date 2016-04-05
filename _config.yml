@@ -39,7 +39,7 @@ feature_image_width: 45
 # Project
 project_image:
 project_summary:
-  
+
 # Navigation
 navigation:
   - label1: All APIs
@@ -51,8 +51,8 @@ navigation:
     size2: 0
     padding: 25
     decorate: 0
-  - label1: Return to API Evangelist
-    link1: http://apievangelist.com
+  - label1: Return to Kin Lane
+    link1: http://kinlane.com
     size1: 80
     extend: 0
     label2:
