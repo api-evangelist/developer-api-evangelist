@@ -16,22 +16,18 @@ title: APIs
     float: left;
     width: 10em;
   }  /* stop the float */
-  br
-  {
-    clear: left;
-  }  /* separate the list from subsequent markup */
   div.wrapper
   {
     margin-bottom: 1em;
   }
 </style>
-<div class="columns">
+<div class="wrapper">
 <ul>
   {% for include in apijson.include %}
   <li>
       <a href="{{ include.url }}">{{ include.name }}</a>
   </li>
   {% endfor %}
-  <br />
 </ul>
+<br style="clear: left;"/>
 </div>
