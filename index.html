@@ -5,6 +5,11 @@ title: APIs
 222
 {% assign index = site.data.apis %}
 {% assign apijson = index %}
+
+{% assign apiname = apijson.name %}
+{% assign apidescription = apijson.description %}
+{% assign apiimage = apijson.image %}
+
 <style>
 /* allow room for 3 columns */
   ul
@@ -24,6 +29,9 @@ title: APIs
     border: 1px solid #000;
   }
 </style>
+<h1>{{ apiname }}</h1>
+<p><img src="{{ apiimage }}" align="right" width="125" /></p>
+<p>{{ apidescription }}</p>
 <div class="wrapper">
 <ul>
   {% for include in apijson.include %}
