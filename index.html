@@ -31,8 +31,9 @@ layout: page
 <div class="wrapper">
 <ul class="includelist">
   {% for include in apijson.include %}
+  {% assign thisurl = include.url | replace: 'apis.json','' %}
   <li class="includelistitem">
-      <a href="{{ include.url }}">{{ include.name }}</a>
+      <a href="{{ thisurl }}">{{ include.name }}</a>
   </li>
   {% endfor %}
 </ul>
