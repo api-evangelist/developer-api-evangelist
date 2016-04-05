@@ -1,8 +1,8 @@
-title:        Developer
-url:          http://developer.apievangelist.com
+title:        Developers
+url:          http://developer.apievangelist.com.com
 
 logo:         https://s3.amazonaws.com/kinlane-productions/api-evangelist/developer-api-evangelist.png
-logo_width:   80
+logo_width:   65
 logo_bottom_padding: 10
 
 version:      1.1.1
@@ -22,7 +22,7 @@ tags_path : /tags.html
 
 org: api-evangelist
 repo: master
-resource: master
+resource: Master
 oauthio: qUDL4eZqKPFb41SwuWIYIwLR6jI
 
 # Masthead title
@@ -37,55 +37,19 @@ feature_image_source: https://s3.amazonaws.com/kinlane-productions/whitepapers/3
 feature_image_width: 45
 
 # Project
-project_image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-robots.jpeg
-project_summary: This is my own developer portal for the API Evangelist platform. These are the APIs I have developed, and offer as part of the API Evangelist brand. This portal should have everything you need to get up and running, and working with the API resources I offer. If you are looking to use my APIs, I recommend dropping me a line, and let me get to know you, and what you are up to. I am not looking to be the next big API provider, so having thousands of users isn't important, but I am happy to share my resources with you.
-
+project_image:
+project_summary:
+  
 # Navigation
 navigation:
-  - label1: Home
+  - label1: All APIs
     link1: /index.html
-    size1: 80
+    size1: 100
     extend: 0
     label2:
     link2:
     size2: 0
-    padding: 0
-    decorate: 0
-  - label1: Getting Started
-    link1: /getting-started/
-    size1: 80
-    extend: 0
-    label2:
-    link2:
-    size2: 60
-    padding: 0
-    decorate: 0
-  - label1: Blog
-    link1: /blog/
-    size1: 80
-    extend: 1
-    label2: RSS
-    link2: /blog.xml
-    size2: 60
-    padding: 5
-    decorate: 0
-  - label1: Support
-    link1: /support/
-    size1: 80
-    extend: 0
-    label2:
-    link2:
-    size2: 60
-    padding: 0
-    decorate: 0
-  - label1: Pricing
-    link1: /pricing/
-    size1: 80
-    extend: 0
-    label2:
-    link2:
-    size2: 60
-    padding: 0
+    padding: 25
     decorate: 0
   - label1: Return to API Evangelist
     link1: http://apievangelist.com
@@ -94,7 +58,7 @@ navigation:
     label2:
     link2:
     size2: 10
-    padding: 12
+    padding: 25
     decorate: 1
 
 # Footer Navigation
