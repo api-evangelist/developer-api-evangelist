@@ -6,31 +6,29 @@ title: APIs
 {% assign index = site.data.apis %}
 {% assign apijson = index %}
 
-{% assign apiname = apijson.name %}
-{% assign apidescription = apijson.description %}
-{% assign apiimage = apijson.image %}
+{% assign name = apijson.name %}
+{% assign description = apijson.description %}
+{% assign image = apijson.image %}
 
 <style>
   ul.includelist
   {
-    width: 90em;
-    border: 1px solid #000;
+    width: 60em;
   }
   li.includelistitem
   {
     float: left;
     width: 10em;
-    border: 1px solid #000;
   }
   div.wrapper
   {
     margin-bottom: 1em;
-    border: 1px solid #000;
+    padding: 25px;
   }
 </style>
-<h1>{{ apiname }}</h1>
-<p><img src="{{ apiimage }}" align="right" width="125" /></p>
-<p>{{ apidescription }}</p>
+<h1>{{ name }}</h1>
+<p><img src="{{ image }}" align="right" width="125" /></p>
+<p>{{ description }}</p>
 <div class="wrapper">
 <ul class="includelist">
   {% for include in apijson.include %}
