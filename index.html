@@ -11,18 +11,17 @@ title: APIs
 {% assign apiimage = apijson.image %}
 
 <style>
-/* allow room for 3 columns */
-  ul
+  ul.includelist
   {
-    width: 30em;
+    width: 90em;
     border: 1px solid #000;
-  }  /* float & allow room for the widest item */
-  ul li
+  }
+  li.includelistitem
   {
     float: left;
     width: 10em;
     border: 1px solid #000;
-  }  /* stop the float */
+  }
   div.wrapper
   {
     margin-bottom: 1em;
@@ -33,9 +32,9 @@ title: APIs
 <p><img src="{{ apiimage }}" align="right" width="125" /></p>
 <p>{{ apidescription }}</p>
 <div class="wrapper">
-<ul>
+<ul class="includelist">
   {% for include in apijson.include %}
-  <li>
+  <li class="includelistitem">
       <a href="{{ include.url }}">{{ include.name }}</a>
   </li>
   {% endfor %}
