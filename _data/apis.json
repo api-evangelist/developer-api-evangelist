@@ -1,0 +1,126 @@
+{
+  "name": "API Evangelist APIs",
+  "description": "These are the APIs I offer up as part of my API Evangelist platform. All of these APis have something to do with the API sector, and usually are focused on providing APIs, but I will also link to my other API related projects that may also be more about consuming, and aggregating APis.",
+  "image": "hhttps://s3.amazonaws.com/kinlane-productions/api-evangelist/t-shirts/KL_InApiWeTrust-1000.png",
+  "tags": [
+    "Kin Lane",
+    "API"
+  ],
+  "created": "2016-04-04",
+  "modified": "2015-01-22",
+  "url": "https://developer.apievangelist.com/apis.json",
+  "specificationVersion": "0.14",
+  "x-country": "US",
+  "apis": [
+    {
+      "name": "Master",
+      "description": "This is the master portal for all of the API Evangelist APIs.",
+      "image": "https://s3.amazonaws.com/kinlane-productions/api-evangelist/t-shirts/KL_InApiWeTrust-1000.png",
+      "humanURL": "http://developer.apievangelist.com/",
+      "baseURL": "http://developer.apievangelist.com/apis.json",
+      "tags": [
+        "API",
+        "Application Programming Interface",
+        "Master"
+      ],
+      "properties": [
+      ],
+      "contact": [
+        {
+          "FN": "API Evangelist",
+          "email": "info@apievangelist.com",
+          "X-twitter": "apievangelist"
+        }
+      ]
+    }
+  ],
+  "include": [
+    {
+      "name": "Authentication API",
+      "url": "http://authentication.apievangelist.com/apis.json"
+    },
+    {
+      "name": "API API",
+      "url": "https://kin-lane.github.io/api/apis.json"
+    },
+    {
+      "name": "Blog API",
+      "url": "https://kin-lane.github.io/blog/apis.json"
+    },
+    {
+      "name": "Building Block API",
+      "url": "https://kin-lane.github.io/buildingblock/apis.json"
+    },
+    {
+      "name": "Certification API",
+      "url": "https://kin-lane.github.io/certification/apis.json"
+    },
+    {
+      "name": "Change Log API",
+      "url": "http://change-log.apievangelist.com/"
+    },
+    {
+      "name": "Curated API",
+      "url": "https://kin-lane.github.io/curated/apis.json"
+    },
+    {
+      "name": "Dictionary API",
+      "url": "https://kin-lane.github.io/dictionary/apis.json"
+    },
+    {
+      "name": "FAQ API",
+      "url": "http://frequently-asked-questions.apievangelist.com/apis.json"
+    },
+    {
+      "name": "Getting Started API",
+      "url": "http://getting-started.apievangelist.com/apis.json"
+    },
+    {
+      "name": "Glossary API",
+      "url": "https://kin-lane.github.io/glossary/apis.json"
+    },
+    {
+      "name": "Idea API",
+      "url": "https://kin-lane.github.io/ideas/apis.json"
+    },
+    {
+      "name": "Issues API",
+      "url": "http://issues.apievangelist.com/apis.json"
+    },
+    {
+      "name": "News API",
+      "url": "https://kin-lane.github.io/news/apis.json"
+    },
+    {
+      "name": "Organization API",
+      "url": "https://kin-lane.github.io/organization/apis.json"
+    },
+    {
+      "name": "Patent API",
+      "url": "https://kin-lane.github.io/patent/apis.json"
+    },
+    {
+      "name": "Question API",
+      "url": "https://kin-lane.github.io/question/apis.json"
+    },
+    {
+      "name": "Road Map API",
+      "url": "http://roadmap.apievangelist.com/apis.json"
+    },
+    {
+      "name": "Support API",
+      "url": "http://support.apievangelist.com/apis.json"
+    },
+    {
+      "name": "Tool API",
+      "url": "https://kin-lane.github.io/tool/apis.json"
+    }
+  ],
+  "maintainers": [
+    {
+      "FN": "API Evangelist",
+      "X-twitter": "apievangelist",
+      "email": "info@apievangelist.com"
+    }
+  ]
+}

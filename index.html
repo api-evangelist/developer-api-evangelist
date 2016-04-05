@@ -1,12 +1,26 @@
 ---
 layout: page
+title: APIs
 ---
 
-<script type="text/javascript" src="https://{{ site.org }}.github.io/master/js/apis-json-include-list.js"></script>
-<script type="text/javascript"> loadAPIsJSONIncludeList('apis.json'); </script>
-<div style="margin-bottom:15px;">
-  <div id="includeHeader"></div>
-  <ul id="includeListing" style="list-style-type: disc; margin-left: 25px; margin-bottom: 25px; padding-bottom: 25px;"></ul>
-</div>
-<p><br /></p>
-<p style="padding-top: 10px;">These APIs are all owned and operated by me, and within the portal for each API you should find everything you need to getting up and running with the APIs, as well as get support, and your specific questions answered.</p>
+{% assign index = site.data.apis %}
+{% assign apijson = index[0] %}
+
+<style>
+ul {
+  padding-left: 25px;
+}
+li {
+    display: block;
+    width: 25%;
+    float: left;
+}
+</style>
+
+<ul>
+  {% for include in apijson.include %}
+  <li>
+      <a href="{{ include.url }}">{{ include.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
