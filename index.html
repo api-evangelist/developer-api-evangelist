@@ -6,24 +6,24 @@ title: APIs
 {% assign index = site.data.apis %}
 {% assign apijson = index %}
 <style>
-.columns
-{   
-    -moz-column-width: 11.5em; /* Firefox */
-    -webkit-column-width: 11.5em; /* webkit, Safari, Chrome */
-    column-width: 11.5em;
-}
-/*remove standard list and bullet formatting from ul*/
-.columns ul
-{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-/* correct webkit/chrome uneven margin on the first column*/
-.columns ul li:first-child
-{
-    margin-top:0px;
-}
+/* allow room for 3 columns */
+  ul
+  {
+    width: 30em;
+  }  /* float & allow room for the widest item */
+  ul li
+  {
+    float: left;
+    width: 10em;
+  }  /* stop the float */
+  br
+  {
+    clear: left;
+  }  /* separate the list from subsequent markup */
+  div.wrapper
+  {
+    margin-bottom: 1em;
+  }
 </style>
 <div class="columns">
 <ul>
@@ -32,5 +32,6 @@ title: APIs
       <a href="{{ include.url }}">{{ include.name }}</a>
   </li>
   {% endfor %}
+  <br />
 </ul>
 </div>
