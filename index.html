@@ -64,8 +64,10 @@ title: API Evangelist - APIs
 			</tr>
 			<tr>
 				<td colspan="3">
-					{% for entry in api_yaml.apis %}
-						{{ entry }}<br />
+					{% for entry in api_yaml %}
+						{% for api in entry.apis %}
+							api: {{ api }}<br />
+						{% endfor %}
 					{% endfor %}
 				</td>
 			</tr>
