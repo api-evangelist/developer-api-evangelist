@@ -60,8 +60,8 @@ title: API Evangelist - APIs
 			{% assign documentation = include.url | replace: 'apis.json','documentation/' %}
 			<tr>
 				<td><h3>{{ include.name }}</h3></td>
-				<td align="center"><a href="{{ documentation }}"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-documentation.png" align="center" width="35" /></a></td>
-				<td align="center"><a href="{{ include.url }}"><img src="https://s3.amazonaws.com/kinlane-productions/api-commons/api-commons-icon.png" align="center" width="35" /></a></td>
+				<td align="center" width="15%"><a href="{{ documentation }}"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-documentation.png" align="center" width="35" /></a></td>
+				<td align="center" width="15%"><a href="{{ include.url }}"><img src="https://s3.amazonaws.com/kinlane-productions/api-commons/api-commons-icon.png" align="center" width="35" /></a></td>
 			</tr>
 			<tr>
 				<td colspan="3">
@@ -72,10 +72,10 @@ title: API Evangelist - APIs
 							{% assign name = api.name %}
 							{% assign url = api.humanURL %}
 							<tr>
-								<td><strong>{{ name }}</strong>
+								<td width="15%"><strong>{{ name }}</strong>
 								{% assign properties = api.properties %}
 								{% for property in properties %}
-									<td>
+									<td width="15%" align="center">
 										{% if property.type == 'x-openapi' %}
 											<a href="{{ property.url }}"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-openapi-spec.png" align="center" width="35" /></a>
 										{% else %}
