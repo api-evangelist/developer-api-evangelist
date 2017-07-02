@@ -40,8 +40,33 @@ title: API Evangelist - APIs
 	</div>
 </section>
 
-
-
+<h4>APIs</h4>
+<p>these are the APIs I have, generated from the APIs.json for this site.</p>
+<div class="table-wrapper">
+	<table class="alt">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>URL</th>
+			</tr>
+		</thead>
+		<tbody>
+		{% assign includes = site.data.apis.include %}
+		{% for include in includes %}
+			<tr>
+				<td>{{ include.name }}</td>
+				<td>{{ include.url }}</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+	<tfoot>
+		<tr>
+			<td></td>
+			<td></td>
+		</tr>
+	</tfoot>
+</table>
+</div>
 
 <!-- About This Research -->
 {% assign about_content = site.data.home_content.index[1] %}
