@@ -28,7 +28,7 @@ include:
   - name: DNS
     url: http://dns.apievangelist.com/apis.json
   - name: Low Hanging Fruit
-    url: http://low-hanging-fruit.apievangelist.com/apis.json
+    url: http://low.hanging.fruit.apievangelist.com/apis.json
   - name: Scraping
     url: http://scraping.apievangelist.com/apis.json
   - name: Database
