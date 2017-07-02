@@ -73,10 +73,10 @@ title: API Evangelist - APIs
 							{% assign name = api.name %}
 							{% assign url = api.humanURL %}
 							<tr>
-								<td width="70%"><strong>{{ name }}</strong>
+								<td width="65%"><strong>{{ name }}</strong>
 								{% assign properties = api.properties %}
 								{% for property in properties %}
-									<td width="15%" align="center">
+									<td width="17%" align="center">
 										{% if property.type == 'x-openapi' %}
 											<a href="{{ property.url }}"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-openapi-spec.png" align="center" width="35" /></a>
 										{% else %}
