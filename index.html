@@ -56,13 +56,18 @@ title: API Evangelist - APIs
 		{% assign includes = site.data.apis.include %}
 		{% for include in includes %}
 			{% assign folder = include.url | replace: 'http://','' | replace: '.apievangelist.com/apis.json','' %}
+			{% assign api_yaml = api_lifecycle[folder] %}
 			<tr>
 				<td>{{ include.name }}</td>
 				<td>{{ include.url }}</td>
 				<td>{{ folder }}</td>
 			</tr>
 			<tr>
-				<td colspan="3">{{ api_lifecycle[folder] }}</td>
+				<td colspan="3">
+					{% for entry in api_yaml.apis %}
+						{{ entry }}<br />
+					{% endfor %}
+				</td>
 			</tr>
 		{% endfor %}
 	</tbody>
