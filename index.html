@@ -59,9 +59,9 @@ title: API Evangelist - APIs
 			{% assign api_yaml = api_lifecycle[folder] %}
 			{% assign documentation = include.url | replace: 'apis.json','documentation/' %}
 			<tr>
-				<td>{{ include.name }}</td>
-				<td><a href="{{ documentation }}"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-documentation.png" align="center" width="35" /></a></td>
-				<td><a href="{{ include.url }}"><img src="https://s3.amazonaws.com/kinlane-productions/api-commons/api-commons-icon.png" align="center" width="35" /></a></td>
+				<td><h3>{{ include.name }}</h3></td>
+				<td align="center"><a href="{{ documentation }}"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-documentation.png" align="center" width="35" /></a></td>
+				<td align="center"><a href="{{ include.url }}"><img src="https://s3.amazonaws.com/kinlane-productions/api-commons/api-commons-icon.png" align="center" width="35" /></a></td>
 			</tr>
 			<tr>
 				<td colspan="3">
@@ -77,10 +77,14 @@ title: API Evangelist - APIs
 								{% for property in properties %}
 									<td>
 										{% if property.type == 'x-openapi' %}
-											<a href="{{ properties.url }}"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-openapi-spec.png" align="center" width="35" /></a>
+											<a href="{{ property.url }}"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-openapi-spec.png" align="center" width="35" /></a>
+										{% else %}
+											&nbsp;
 										{% endif %}
 										{% if property.type == 'x-atom' %}
-											<a href="{{ properties.url }}"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-atom-feed.png" align="center" width="35" /></a>
+											<a href="{{ property.url }}"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-atom-feed.png" align="center" width="35" /></a>
+										{% else %}
+											&nbsp;
 										{% endif %}
 									</td>
 								{% endfor %}
