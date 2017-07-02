@@ -69,7 +69,7 @@ title: API Evangelist - APIs
 						{% for api in index.apis %}
 							{% assign name = api.name %}
 							{% assign url = api.humanURL %}
-							{{ name }}<br />
+							name: {{ name }}<br />
 							{% assign properties = api.properties %}
 							properties: {{ properties }}<br /><br />
 						{% endfor %}
