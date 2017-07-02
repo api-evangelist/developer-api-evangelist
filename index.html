@@ -54,8 +54,8 @@ title: API Evangelist - APIs
 			{% assign docs = include.url | replace: 'apis.json','documentation/' %}
 			<tr>
 				<td width="70%" style="font-size: 16px; font-weight: bold;">{{ include.name }}</td>
-				<td align="center" width="15%"><a href="{{ docs }}"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-documentation.png" align="center" width="40" /></a></td>
-				<td align="center" width="15%"><a href="{{ include.url }}"><img src="https://s3.amazonaws.com/kinlane-productions/api-commons/api-commons-icon.png" align="center" width="45" /></a></td>
+				<td align="center" width="15%"><a href="{{ docs }}" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-documentation.png" align="center" width="40" /></a></td>
+				<td align="center" width="15%"><a href="{{ include.url }}" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/api-commons/api-commons-icon.png" align="center" width="45" /></a></td>
 			</tr>
 			<tr>
 				<td colspan="3" style="padding-top: 5px;">
@@ -72,12 +72,12 @@ title: API Evangelist - APIs
 									<td width="16%" align="center">
 										{% if property.type == 'x-openapi' %}
 											{% assign property_url = property.url | replace: 'curated','news' %}
-											<a href="{{ property_url }}"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-openapi-spec.png" align="center" width="35" /></a>
+											<a href="{{ property_url }}" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-openapi-spec.png" align="center" width="35" /></a>
 										{% else %}
 											&nbsp;
 										{% endif %}
 										{% if property.type == 'x-atom' %}
-											<a href="{{ property.url }}"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-atom-feed.png" align="center" width="35" /></a>
+											<a href="{{ property.url }}" target="_blank"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-atom-feed.png" align="center" width="35" /></a>
 										{% else %}
 											&nbsp;
 										{% endif %}
