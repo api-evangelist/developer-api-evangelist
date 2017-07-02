@@ -52,6 +52,7 @@ title: API Evangelist - APIs
 			</tr>
 		</thead>
 		<tbody>
+		{% assign api_lifecycle = site.data.apis.api-lifecycle %}
 		{% assign includes = site.data.apis.include %}
 		{% for include in includes %}
 			{% assign folder = include.url | replace: 'http://','' | replace: '.apievangelist.com/apis.json','' %}
@@ -59,6 +60,9 @@ title: API Evangelist - APIs
 				<td>{{ include.name }}</td>
 				<td>{{ include.url }}</td>
 				<td>{{ folder }}</td>
+			</tr>
+			<tr>
+				<td colspan="3">{{ api_lifecycle[folder] }}</td>
 			</tr>
 		{% endfor %}
 	</tbody>
