@@ -57,6 +57,21 @@ title: API Evangelist - APIs
 				<td>{{ include.name }}</td>
 				<td>{{ include.url }}</td>
 			</tr>
+			<script type="text/javascript">
+				$subway_url = "{{ include.url }}";
+					console.log("loading..." + $subway_url);
+
+					$.ajax({
+					  url: $subway_url,
+					  type:"GET",
+					  contentType:"application/vnd.siren+json",
+					  success:function(data) {
+
+				      	console.log(data);
+
+				    	}
+					});
+			</script>
 		{% endfor %}
 	</tbody>
 	<tfoot>
