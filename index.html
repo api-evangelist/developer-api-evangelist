@@ -71,8 +71,8 @@ title: API Evangelist - APIs
 								{% for property in properties %}
 									<td width="16%" align="center">
 										{% if property.type == 'x-openapi' %}
-											{% assign url = property.url | replace: 'http://','' %}
-											<a href="{{ property.url }}"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-openapi-spec.png" align="center" width="35" /></a>
+											{% assign property_url = property.url | replace: 'curated','news' %}
+											<a href="{{ property_url }}"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-openapi-spec.png" align="center" width="35" /></a>
 										{% else %}
 											&nbsp;
 										{% endif %}
