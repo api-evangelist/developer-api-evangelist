@@ -1,42 +1,59 @@
 ---
-layout: page
+layout: default
+title: API Evangelist - APIs
 ---
-{% assign index = site.data.apis %}
-{% assign apijson = index %}
 
-{% assign name = apijson.name %}
-{% assign description = apijson.description %}
-{% assign image = apijson.image %}
-<style>
-  ul.includelist
-  {
-    width: 50em;
-  }
-  li.includelistitem
-  {
-    float: left;
-    width: 12em;
-    list-style: disc;
-    padding: 5px;
-  }
-  div.wrapper
-  {
-  padding: 5px;
-  border: 0px solid #000;
-  }
-</style>
-<h1>{{ name }}</h1>
-<p><img src="{{ image }}" align="right" width="75" /></p>
-<p>{{ description }}</p>
-<div class="wrapper">
-<ul class="includelist">
-  {% for include in apijson.include %}
-  {% assign thisurl = include.url | replace: 'apis.json','' %}
-  <li class="includelistitem">
-      <a href="{{ thisurl }}">{{ include.name }}</a>
-  </li>
-  {% endfor %}
-</ul>
-<br style="clear: left;"/>
-</div>
-<p>These are all my APIs I have developed for my own purposes, but do not mind sharing access with the public, and even deeper relationships with partners. My API stack is always changing and evolving, so if you are looking for something in particular -- let me know. You should be able to find everything you need within each APIs portal.</p>
+<!-- Main -->
+{% assign home_content = site.data.home_content.index[0] %}
+<section id="banner">
+	<div class="content">
+		<header>
+			<h2>{{ home_content.title }}</h2>
+		</header>
+		{{ home_content.content }}
+	</div>
+	<span class="image object">
+		<img src="{{ home_content.image }}" alt="" width="25%" />
+	</span>
+</section>
+
+<!-- Partners -->
+<a name="Partners"></a>
+<section>
+	<header>
+		<h2>API Evangelist Partners</h2>
+		<p>These are my partners who invest in API Evangelist each month, helping underwrite my research, and making sure I'm able to keep monitoring the API space as I do.</p>
+	</header>
+	<div class="features">
+		{% assign partners = site.data.partners.index | sort: 'view_sort' %}
+    {% for partner in partners %}
+      {% if partner.type == 'Sponsor' %}
+			<article>
+				<p><a href="{{ partner.url }}" target="_blank"><img src="{{ partner.image }}" width="75%" style="padding: 15px;" align="center" /></a></p>
+				<div class="content">
+					<h3><a href="{{ partner.url }}" target="_blank">{{ partner.name }}</a></h3>
+					<p>{{ partner.description }}</p>
+				</div>
+			</article>
+      {% endif %}
+    {% endfor %}
+	</div>
+</section>
+
+
+
+
+<!-- About This Research -->
+{% assign about_content = site.data.home_content.index[1] %}
+<a name="About"></a>
+<section id="banner">
+	<div class="content">
+		<header>
+			<h2>{{ about_content.title }}</h2>
+		</header>
+		{{ about_content.content }}
+	</div>
+	<span class="image object">
+		<img src="{{ about_content.image }}" alt="" width="25%" />
+	</span>
+</section>

@@ -1,0 +1,191 @@
+name: API Evangelist - APIs
+description: These are the APIs avilable across my work as the API Evangelist, studying the technology, business, and politics of APIs.
+image: http://s3.amazonaws.com/kinlane-productions/api-evangelist/t-shirts/KL_InApiWeTrust-1000.png
+tags:
+  - API
+  - Application Programming Interface
+created: "2017-06-24"
+modified: "2017-06-30"
+url: https://developer.apievangelist.com/apis.json
+specificationVersion: "0.14"
+apis: []
+x-common:
+  - type: x-support
+    url: https://github.com/api-evangelist/master/issues
+  - type: x-documentation
+    url: http://management.apievangelist.com/documentation/
+  - type: x-github-repo
+    url: https://github.com/api-evangelist/master
+include:
+  - name: Definitions
+    url: http://definitions.apievangelist.com/apis.json
+  - name: Design
+    url: http://design.apievangelist.com/apis.json
+  - name: Versioning
+    url: http://versioning.apievangelist.com/apis.json
+  - name: Hypermedia
+    url: http://hypermedia.apievangelist.com/apis.json
+  - name: DNS
+    url: http://dns.apievangelist.com/apis.json
+  - name: Low Hanging Fruit
+    url: http://low-hanging-fruit.apievangelist.com/apis.json
+  - name: Scraping
+    url: http://scraping.apievangelist.com/apis.json
+  - name: Database
+    url: http://database.apievangelist.com/apis.json
+  - name: Deployment
+    url: http://deployment.apievangelist.com/apis.json
+  - name: Rogue
+    url: http://rogue.apievangelist.com/apis.json
+  - name: Microservices
+    url: http://microservices.apievangelist.com/apis.json
+  - name: Algorithms
+    url: http://algorithms.apievangelist.com/apis.json
+  - name: Search
+    url: http://search.apievangelist.com/apis.json
+  - name: Machine Learning
+    url: http://machine-learning.apievangelist.com/apis.json
+  - name: Proxy
+    url: http://proxy.apievangelist.com/apis.json
+  - name: Virtualization
+    url: http://virtualization.apievangelist.com/apis.json
+  - name: Containers
+    url: http://containers.apievangelist.com/apis.json
+  - name: Management
+    url: http://management.apievangelist.com/apis.json
+  - name: Serverless
+    url: http://serverless.apievangelist.com/apis.json
+  - name: Portal
+    url: http://portal.apievangelist.com/apis.json
+  - name: Getting Started
+    url: http://getting-started.apievangelist.com/apis.json
+  - name: Documentation
+    url: http://documentation.apievangelist.com/apis.json
+  - name: Frequently Asked Questions
+    url: http://frequently-asked-questions.apievangelist.com/apis.json
+  - name: Support
+    url: http://support.apievangelist.com/apis.json
+  - name: Communications
+    url: http://communications.apievangelist.com/apis.json
+  - name: Road Map
+    url: http://road-map.apievangelist.com/apis.json
+  - name: Issues
+    url: http://issues.apievangelist.com/apis.json
+  - name: Change Log
+    url: http://change-log.apievangelist.com/apis.json
+  - name: Monitoring
+    url: http://monitoring.apievangelist.com/apis.json
+  - name: Testing
+    url: http://testing.apievangelist.com/apis.json
+  - name: Performance
+    url: http://performance.apievangelist.com/apis.json
+  - name: Caching
+    url: http://caching.apievangelist.com/apis.json
+  - name: Reliability
+    url: http://reliability.apievangelist.com/apis.json
+  - name: Authentication
+    url: http://authentication.apievangelist.com/apis.json
+  - name: Encryption
+    url: http://encryption.apievangelist.com/apis.json
+  - name: Vulnerabilities
+    url: http://vulnerabilities.apievangelist.com/apis.json
+  - name: Breaches
+    url: http://breaches.apievangelist.com/apis.json
+  - name: Security
+    url: http://security.apievangelist.com/apis.json
+  - name: Terms of Service (TOS)
+    url: http://terms-of-service.apievangelist.com/apis.json
+  - name: Surveillance
+    url: http://surveillance.apievangelist.com/apis.json
+  - name: Privacy
+    url: http://privacy.apievangelist.com/apis.json
+  - name: Cybersecurity
+    url: http://cybersecurity.apievangelist.com/apis.json
+  - name: Reclaim
+    url: http://reclaim.apievangelist.com/apis.json
+  - name: Transparency
+    url: http://transparency.apievangelist.com/apis.json
+  - name: Observability
+    url: http://observability.apievangelist.com/apis.json
+  - name: Licensing
+    url: http://licensing.apievangelist.com/apis.json
+  - name: Copyright
+    url: http://copyright.apievangelist.com/apis.json
+  - name: Accessibility
+    url: http://accessibility.apievangelist.com/apis.json
+  - name: Branding
+    url: http://branding.apievangelist.com/apis.json
+  - name: Regulation
+    url: http://regulation.apievangelist.com/apis.json
+  - name: Patents
+    url: http://patents.apievangelist.com/apis.json
+  - name: Discovery
+    url: http://discovery.apievangelist.com/apis.json
+  - name: Client
+    url: http://client.apievangelist.com/apis.json
+  - name: Command Line Interface
+    url: http://command-line-interface.apievangelist.com/apis.json
+  - name: Bots
+    url: http://bots.apievangelist.com/apis.json
+  - name: Internet of Things
+    url: http://internet-of-things.apievangelist.com/apis.json
+  - name: Industrial
+    url: http://industrial.apievangelist.com/apis.json
+  - name: Network
+    url: http://network.apievangelist.com/apis.json
+  - name: IDE
+    url: http://ide.apievangelist.com/apis.json
+  - name: SDK
+    url: http://sdk.apievangelist.com/apis.json
+  - name: Plugin
+    url: http://plugin.apievangelist.com/apis.json
+  - name: Browsers
+    url: http://browsers.apievangelist.com/apis.json
+  - name: Embeddable
+    url: http://embeddable.apievangelist.com/apis.json
+  - name: Visualization
+    url: http://visualization.apievangelist.com/apis.json
+  - name: Analysis
+    url: http://analysis.apievangelist.com/apis.json
+  - name: Logging
+    url: http://logging.apievangelist.com/apis.json
+  - name: Aggregation
+    url: http://aggregation.apievangelist.com/apis.json
+  - name: iPaaS
+    url: http://ipaas.apievangelist.com/apis.json
+  - name: Integrations
+    url: http://integrations.apievangelist.com/apis.json
+  - name: Migration
+    url: http://migration.apievangelist.com/apis.json
+  - name: Backups
+    url: http://backups.apievangelist.com/apis.json
+  - name: Real Time
+    url: http://real-time.apievangelist.com/apis.json
+  - name: Orchestration
+    url: http://orchestration.apievangelist.com/apis.json
+  - name: Voice
+    url: http://voice.apievangelist.com/apis.json
+  - name: Spreadsheets
+    url: http://spreadsheets.apievangelist.com/apis.json
+  - name: Investment
+    url: http://investment.apievangelist.com/apis.json
+  - name: Monetization
+    url: http://monetization.apievangelist.com/apis.json
+  - name: Plans
+    url: http://plans.apievangelist.com/apis.json
+  - name: Partners
+    url: http://partners.apievangelist.com/apis.json
+  - name: Certification
+    url: http://certification.apievangelist.com/apis.json
+  - name: Acquisitions
+    url: http://acquisitions.apievangelist.com/apis.json
+  - name: Evangelism
+    url: http://evangelism.apievangelist.com/apis.json
+  - name: Showcase
+    url: http://showcase.apievangelist.com/apis.json
+  - name: Deprecation
+    url: http://deprecation.apievangelist.com/apis.json
+maintainers:
+  - FN: Kin Lane
+    x-twitter: apievangelist
+    email: info@apievangelist.com

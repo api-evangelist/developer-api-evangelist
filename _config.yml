@@ -1,8 +1,11 @@
-title:        Developers
-url:          http://developer.apievangelist.com.com
+title:        API Evangelist APIs
+url:          http://developer.apievangelist.com
+raw_url: http://developer.apievangelist.com/apis/
+
+tag: API Evangelist APIs
 
 logo:         https://s3.amazonaws.com/kinlane-productions/api-evangelist/developer-api-evangelist.png
-logo_width:   65
+logo_width:   80
 logo_bottom_padding: 10
 
 version:      1.1.1
@@ -12,73 +15,17 @@ author:
 markdown:     kramdown
 
 permalink: /:categories/:year/:month/:day/:title/
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", ".DS_Store"]
 
-paginate: 50
+paginate: 25
 paginate_path: "/blog/page:num"
 
-categories_path : /categories.html
-tags_path : /tags.html
+github_user: api-evangelist
+github_repo: master
+github_branch: gh-pages
 
-org: api-evangelist
-repo: master
-resource: Master
-oauthio: qUDL4eZqKPFb41SwuWIYIwLR6jI
-
-# Masthead title
-masthead_link: http://developer.apievangelist.com
-masthead_font_size: 85
-masthead_title: '{"Developer"}'
-
-# Feature
-feature_title: API Design Providers Guide
-feature_link: http://apis.how/xzca4kr2wb
-feature_image_source: https://s3.amazonaws.com/kinlane-productions/whitepapers/3scale/report-image-api-design.png
-feature_image_width: 45
-
-# Project
-project_image:
-project_summary:
-
-# Navigation
-navigation:
-  - label1: All APIs
-    link1: /index.html
-    size1: 100
-    extend: 0
-    label2:
-    link2:
-    size2: 0
-    padding: 25
-    decorate: 0
-  - label1: Return to Kin Lane
-    link1: http://kinlane.com
-    size1: 80
-    extend: 0
-    label2:
-    link2:
-    size2: 10
-    padding: 25
-    decorate: 1
-
-# Footer Navigation
-footernavigation:
-  - label: API 100K View
-    link: http://apievangelist.com
-  - label: News
-    link: /news/
-  - label: Partners
-    link: http://apievangelist.com/partners/
-  - label: APIs.json
-    link: http://apisjson.org
-  - label: About Kin Lane
-    link: http://kinlane.com
-  - label: Branding Guidelines
-    link: http://apievangelist.com/branding-guidelines.html
-  - label: Contact
-    link: http://kinlane.com/contacts/
-
-# sponsors
-sponsors_margin_top: 15
-sponsors_padding_top: 3
-sponsors_json_url: https://s3.amazonaws.com/kinlane-productions/json/sponsors.json
+# Footer
+footer_title: API Evangelist
+footer_link: http://apievangelist.com
+footer_image_source: https://s3.amazonaws.com/kinlane-productions/footer/empowered-by-you-banner.png
+footer_image_width: 60
