@@ -66,11 +66,13 @@ title: API Evangelist - APIs
 				<td colspan="3">
 					{% for entry in api_yaml %}
 						{% assign index = entry[1] %}
-						{% assign name = index.name %}
-						{% assign url = index.humanURL %}
-						{{ name }}<br />
-						{% assign properties = index %}
-						properties: {{ properties }}<br /><br />
+						{% for api in index.apis %}
+							{% assign name = api.name %}
+							{% assign url = api.humanURL %}
+							{{ name }}<br />
+							{% assign properties = api.properties %}
+							properties: {{ properties }}<br /><br />
+						{% endfor %}
 					{% endfor %}
 				</td>
 			</tr>
