@@ -65,8 +65,8 @@ title: API Evangelist - APIs
 			<tr>
 				<td colspan="3">
 					{% for entry in api_yaml %}
-						{% assign index = entry.apis %}
-						apis: {{ index.apis }}<br /><br />
+						{% assign index = entry[1] %}
+						apis: {{ index }}<br /><br />
 					{% endfor %}
 				</td>
 			</tr>
