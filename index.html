@@ -57,23 +57,36 @@ title: API Evangelist - APIs
 		{% for include in includes %}
 			{% assign folder = include.url | replace: 'http://','' | replace: '.apievangelist.com/apis.json','' %}
 			{% assign api_yaml = api_lifecycle[folder] %}
+			{% assign documentation = include.url | replace: 'apis.json','documentation/' %}
 			<tr>
 				<td>{{ include.name }}</td>
-				<td>{{ include.url }}</td>
-				<td>{{ folder }}</td>
+				<td><a href="{{ documentation }}"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-documentation.png" align="center" width="35" /></a></td>
+				<td><a href="{{ include.url }}"><img src="https://s3.amazonaws.com/kinlane-productions/api-commons/api-commons-icon.png" align="center" width="35" /></a></td>
 			</tr>
 			<tr>
 				<td colspan="3">
+					<table>
 					{% for entry in api_yaml %}
 						{% assign index = entry[1] %}
 						{% for api in index.apis %}
 							{% assign name = api.name %}
 							{% assign url = api.humanURL %}
-							name: {{ name }}<br />
-							{% assign properties = api.properties %}
-							properties: {{ properties }}<br /><br />
+							<tr>
+								<td><strong>{{ name }}</strong>
+								{% assign properties = api.properties %}
+								{% for property in properties %}
+									<td>
+										{% if property.type == 'x-openapi' %}
+											<a href="{{ properties.url }}"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-openapi-spec.png" align="center" width="35" /></a>
+										{% endif %}
+										{% if property.type == 'x-atom' %}
+											<a href="{{ properties.url }}"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-atom-feed.png" align="center" width="35" /></a>
+										{% endif %}
+									</td>
+								{% endfor %}
 						{% endfor %}
 					{% endfor %}
+				</table>
 				</td>
 			</tr>
 		{% endfor %}
